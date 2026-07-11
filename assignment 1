@@ -1,0 +1,36 @@
+create database employer;
+use employer;
+
+create table employers (
+     Emp_ID int,
+     Emp_name varchar(25),
+     Dept varchar(20),
+     salary int
+);
+
+insert into employers values (001,'Leo','SALES',1500),
+(002,'Parthiban','MARKETING',2000),(003,'Bruce','HR',3000),
+(004,'Tony','DEVELOPER',1500);
+
+desc employers;
+
+select * from employers;
+
+output:
+
+Field	      Type	        Null	Key	 Default	Extra
+Emp_ID	     int	        YES		NULL	
+Emp_name	   varchar(25)	YES		NULL	
+Dept	       varchar(20)	YES		NULL	
+salary	      int	        YES		NULL	
+
+
+
+
+
+
+Emp_ID	Emp_name	 Dept	     salary
+1	       Leo	    SALES	      1500
+2	     Parthiban	MARKETING	  2000
+3      	Bruce   	HR	        3000
+4     	Tony	    DEVELOPER	  1500
