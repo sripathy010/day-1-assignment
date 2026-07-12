@@ -1,0 +1,10 @@
+select * from std_info where std_deptnum=14;
+
+update std_info set std_mark=78 where std_deptnum=14;
+
+delete from std_info where std_deptnum=77;
+
+result:
+# std_name	std_deptnum	   std_subject	 std_mark
+    lasar	        14	       economics	    78
+
