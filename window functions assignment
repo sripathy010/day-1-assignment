@@ -1,0 +1,33 @@
+select std_name,mark,std_subject, sum(mark) over (order by mark) as sum_total from student_info;
+
+select std_name,mark,std_subject, rank() over (order by mark desc) as rank from student_info;
+
+select std_name,mark,std_subject, lead(mark,3,2) over (order by mark desc) as lead_ from student_info;
+
+output:
+
+# std_name	   mark	   std_subject	    sum_total
+rio	            45	      maths	           45
+sore	          56	      maths	           101
+remo	          57	      english	         158
+harish        	67	      economics	       225
+hari	          78	      economics      	 303
+ria	            89	      english	         392
+
+# std_name	    mark	   std_subject	     rank
+ria	             89	      english	           1
+hari	           78	      economics	         2
+harish	         67	      economics	         3
+remo	           57	      english	           4
+sore	           56	      maths	             5
+rio	             45	      maths	             6
+
+# std_name	    mark	    std_subject     	lead_
+ria	             89	       english	         57
+hari	           78	       economics	       56
+harish	         67	       economics	       45
+remo	           57	       english	          2
+sore	           56	       maths	            2
+rio	             45	       maths	            2
+
+
