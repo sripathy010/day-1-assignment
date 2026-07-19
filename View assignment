@@ -1,0 +1,30 @@
+create view work_view as
+select work_id,worker_dep,worker_name
+from workers;
+
+insert into work_view (work_id,worker_dep,worker_name) values 
+(5, 'nithya', 700, 'marketing');
+
+update work_view set work_id=11 where work_id = 4;
+update work_view set worker_name ='troy' where work_id = 11;
+select * from workers where work_id = 11;
+select * from work_view;
+
+result:
+Error Code: 1136. Column count doesn't match value count at row 1
+
+# work_id	     worker_name	   worker_sales	   worker_dep
+     11	           troy	           8000	        economist
+
+
+# work_id	    worker_dep	  worker_name
+     1	      data science    	sri
+     2	      data science	    john
+     3	      data analyst	    mayan
+     5	    digital marketing	  nithish
+     6	     data analyst	      karupu
+     7	     digital marketing	saran
+     8	      economist	         pathy
+     11	      economist         	troy
+
+
